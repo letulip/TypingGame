@@ -32,6 +32,13 @@ namespace TypingGame
                 listBox1.Items.Clear();
                 listBox1.Items.Add("Game over!");
                 timer1.Stop();
+                
+                if (MessageBox.Show("Do you want a new round?", "Game over", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    Application.Restart();
+                }
+                else
+                    Close();
             }
         }
 
