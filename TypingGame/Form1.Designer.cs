@@ -48,12 +48,14 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 108;
             this.listBox1.Location = new System.Drawing.Point(0, 0);
+            this.listBox1.MultiColumn = true;
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(860, 136);
             this.listBox1.TabIndex = 0;
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Interval = 800;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -75,6 +77,7 @@
             // 
             // progBarDifficulty
             // 
+            this.progBarDifficulty.Maximum = 701;
             this.progBarDifficulty.Name = "progBarDifficulty";
             this.progBarDifficulty.Size = new System.Drawing.Size(100, 16);
             // 
@@ -117,10 +120,12 @@
             this.ClientSize = new System.Drawing.Size(860, 136);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.listBox1);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Hit the Keys!";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
